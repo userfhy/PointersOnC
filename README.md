@@ -1,1 +1,2 @@
-《c和指针》练习
+# *Pointers On C*
+Notes and exercises.
