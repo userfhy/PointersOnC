@@ -1,0 +1,9 @@
+判断语句：
+    if( ((year % 4 == 0) && (year % 100 != 0)) || year % 400 == 0) {
+        printf("%d是闰年\n",year);
+    }else {
+        printf("%d是平年\n",year);
+    }
+
+
+leap_year = ((year % 4 == 0) && (year % 100 ! = 0)) || year % 400 == 0 ? true : false ;
