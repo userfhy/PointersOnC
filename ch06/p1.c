@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #define NUL '\0'
 
@@ -23,6 +24,13 @@ int main(int argc, char const *argv[]) {
     char *source = "ABCDEF";
     char *chars = "erwtEFB";
     char const * ch = NULL;
+    // 内置 strpbrk 方法
+    char *test = strpbrk(source, chars);
+    if(test){
+        printf("The result is: %s\n", test);
+    }else{
+        printf("Sorry!\n");
+    }
 
     if( (ch = find_char(source, chars)) != NULL ) {
         printf("%c\n", *ch);
