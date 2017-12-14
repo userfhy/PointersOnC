@@ -8,10 +8,8 @@ int main(int argc, char const *argv[]) {
   int bit_number;
   int number;
 
-  for( number = 3, bit_number = 0; number <= MAX_VALUE; number += 2, bit_number += 1 )
-  {
-    if( number > limits )
-    {
+  for( number = 3, bit_number = 0; number <= MAX_VALUE; number += 2, bit_number += 1 ) {
+    if( number > limits ) {
       printf("%d-%d:%d\n", limits-1000, limits, n_primes );
       n_primes = 0;
       limits += 1000;

@@ -53,20 +53,17 @@ int main(int argc, char const *argv[]) {
     *sp++ = 0xff;//使用16进制初始化字符变量
 
 
-  for( number = 3; number <= MAX_VALUE; number += 2 )
-  {
+  for( number = 3; number <= MAX_VALUE; number += 2 ) {
     bit_number = ( number - 3 ) / 2;//偶数
-    if( !test_bit(sieve, bit_number) )
+    if( !test_bit(sieve, bit_number) ) {
       continue;
-    while ( (bit_number += number) <= MAX_BIT_NUMBER )
-    {
+    }
+    while ( (bit_number += number) <= MAX_BIT_NUMBER ) {
       clear_bit( sieve, bit_number );
     }
     /*以上部分代码可以这样写
-    if( test_bit(sieve, bit_number) )
-    {
-      while ( (bit_number += number) <= MAX_BIT_NUMBER )
-      {
+    if( test_bit(sieve, bit_number) ) {
+      while ( (bit_number += number) <= MAX_BIT_NUMBER ) {
         clear_bit( sieve, bit_number );
       }
     }
@@ -77,10 +74,10 @@ int main(int argc, char const *argv[]) {
     输出
   */
   printf("2\t" );
-  for(bit_number = 0, number = 3; number <= MAX_VALUE; bit_number +=1, number += 2 )
-  {
-    if( test_bit( sieve, bit_number ))
+  for(bit_number = 0, number = 3; number <= MAX_VALUE; bit_number +=1, number += 2 ) {
+    if( test_bit( sieve, bit_number )) {
       printf("%d\t", number);
+    }
   }
   return 0;
 }
