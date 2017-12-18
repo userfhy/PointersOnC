@@ -26,5 +26,6 @@ int main()
     int *p = find_int(6, a, sizeof(a));
     // p 返回位置对应指针既地址 *p 所在地址中的数据
     printf("pointer: %p data: %d\n", p, *p);
+    return 0;
 }
 
