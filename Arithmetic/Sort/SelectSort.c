@@ -9,8 +9,10 @@
  */
 #include <stdio.h>
 
+#define SWAP(x, y, t) ((t) = (x), (x) = (y), (y) = (t))
+
 void
-BubbleSort(int a[], int count)
+SelectSort(int a[], int count)
 {
     int i,j,k,temp;
     for(i = 0; i < count; i++ ) {
@@ -20,12 +22,13 @@ BubbleSort(int a[], int count)
                 k = j;
             }
         }
-
-        if(k != i) {
+        SWAP(a[i], a[k], temp); // 宏定义交换变量 和下边判断一样
+        /*if(k != i) {
             temp = a[i];
             a[i] = a[k];
             a[k] = temp;
         }
+        */
     }
 }
 
@@ -45,7 +48,7 @@ int main(void)
     N = sizeof(b)/sizeof(int);
     printf("Before Ordering\n");
     printA1(b, N);
-    BubbleSort(b, N);
+    SelectSort(b, N);
     printf("After Ordering\n");
     printA1(b, N);
 
