@@ -9,7 +9,7 @@ The 'q' file indicates the answer to the question.
 
 ## Directory Structure
 
-Arithmetic
-└── Sort
-    └── BubbleSort.c
+    Arithmetic
+    └── Sort
+        └── BubbleSort.c
 
