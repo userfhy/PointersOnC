@@ -11,5 +11,5 @@ The 'q' file indicates the answer to the question.
 
     Arithmetic
     └── Sort
-        └── BubbleSort.c
-
+        ├── BubbleSort.c
+        └── SelectSort.c
