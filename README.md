@@ -12,4 +12,6 @@ Folder 'Arithmetic' just for learning algorithm with c language.
     Arithmetic
     └── Sort
         ├── BubbleSort.c
+        ├── InsertSort.c
         └── SelectSort.c
+
