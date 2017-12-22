@@ -16,7 +16,7 @@
 #include <stdio.h>
 
 void
-BubbleSort(int a[], int count)
+BubbleSort(int *a, int count)
 {
     int i,j,t;
     for(i = 1; i < count; i++) {

@@ -13,7 +13,7 @@
 #define SWAP(x, y, t) ((t) = (x), (x) = (y), (y) = (t))
 
 void
-SelectSort(int a[], int count)
+SelectSort(int *a, int count)
 {
     int i,j,k,temp;
     for(i = 0; i < count; i++ ) {

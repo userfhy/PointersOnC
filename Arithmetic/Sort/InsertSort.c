@@ -16,7 +16,7 @@
 #include <stdio.h>
 
 void
-InsertSort(int a[], int count)
+InsertSort(int *a, int count)
 {
     int i,j,k,temp;
     for(i = 1; i < count; i++) {
