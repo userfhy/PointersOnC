@@ -1,85 +1,86 @@
-#include<stdio.h>
-
-static int chessboard[8][8];
-
-//判断能否攻击其他棋子
-int attack_other( int row, int column )
+#include <stdio.h>
+#define SIZE 8
+static int board[SIZE][SIZE];
+void insertQueue(int row);
+void displayQueue();
+int checkConflict(int row,int col);
+int main(void)
 {
-  int i ;
-
-  for ( i = 0; i < 8 && i != row ; i++ )
-  {
-    if ( chessboard[i][column] || chessboard[row][i] )
-      return 1;
-    if ( chessboard[i][column-(row-i)] && chessboard[i][column+(row-i)] )
-      return 1;
-  }
-
-  return 0;
-}
-
-void print_chessboard()
-{
-  int row, column;
-  for( row = 0; row < 8; row++ )
-  {
-    for( column = 0; column < 8; column++ )
-    {
-      printf("%d\t", chessboard[row][column]);
-    }
-    printf( "\n" );
-  }
-}
-
-int conflicts( int row, int column )
-{
-  int i;
-  for( i = 1; i < 8; i += 1 )
-  {
-    if( row - i >= 0 && chessboard[ row - i ][ column ] )
-      return 1;
-    if( column - i >= 0 && chessboard[ row ][ column - i ] )
-      return 1;
-    if( column + i < 8 && chessboard[ row ][ column + i ] )
-      return 1;
-
-    if( row - i >= 0 && column - i >= 0 && chessboard[ row - i ][ column - i ] )
-      return 1;
-    if( row - i >= 0 && column + i < 8 && chessboard[ row - i ][ column + i ] )
-      return 1;
-    }
+    insertQueue(0);
     return 0;
 }
-void place_chess( int row )
+//将皇后插入棋盘内
+void insertQueue(int row)
 {
-  int column;
-
-  for ( column = 0; column < 8; column++ )
-  {
-    chessboard[row][column] = 1;
-
-    if ( row == 0 || !conflicts( row, column ) )
+    int coli;
+    for (coli=0;coli<SIZE;coli++)
     {
-      if( row < 7 )
-      {
-        place_chess( row+1 );
-      }
-      else
-      {
-        //print_chessboard();
-      }
+        board[row][coli] = 1;
+        if(checkConflict(row,coli))
+        {
+            if(row ==(SIZE-1))
+            {
+                displayQueue();
+            } else
+            {
+                insertQueue(row+1);
+            }
+        }
+        board[row][coli] = 0;
     }
-
-    chessboard[row][column] = 0;
-  }
-
-
 }
-
-int main(int argc, char const *argv[]) {
-
-  printf("%d\n", attack_other( 1, 2) );
-  place_chess(0);
-  print_chessboard();
-  return 0;
+//检查新插入皇后是否已现有的皇后有冲突
+int checkConflict(int row,int col)
+{
+    int rowi,coli;
+    //检查与左上方的皇后是否有冲突
+    if(row>0 && col>0)
+    {
+        for (rowi=row-1,coli=col-1; rowi>=0 && coli>=0; rowi--,coli--)
+        {
+            if(board[rowi][coli] == 1)
+            {
+                return 0;
+            }
+        }
+    }
+    //检查与正上方的皇后是否有冲突
+    if(row > 0)
+    {
+        for (rowi=row-1;rowi>=0;rowi--)
+        {
+            if(board[rowi][col] == 1)
+            {
+                return 0;
+            }
+        }
+    }
+    //检查与右上方的皇后是否有冲突
+    if(row>0 && col<(SIZE-1))
+    {
+        for (rowi=row-1,coli=col+1; rowi>=0 && coli<SIZE; rowi--,coli++)
+        {
+            if(board[rowi][coli] == 1)
+            {
+                return 0;
+            }
+        }
+    }
+    return 1;
+}
+//将结果进行打印
+void displayQueue()
+{
+    static count=1;
+    printf("%d\n",count++);
+    int i,j;
+    for (i=0;i<SIZE;i++)
+    {
+        for (j=0;j<SIZE;j++)
+        {
+            printf("%d ",board[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
 }
