@@ -1,5 +1,5 @@
 /**
- * @example  选择排序
+ * @example  插入排序
  * @author   Fhy
  * @website  https://aiti.fun
  * @date     2017/12/22

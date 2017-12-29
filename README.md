@@ -11,7 +11,8 @@ Folder 'Arithmetic' just for learning algorithm with c language.
 
     Arithmetic
     └── Sort
-        ├── BubbleSort.c
-        ├── InsertSort.c
-        ├── SelectSort.c
-        └── ShellSort.c
+        ├── BubbleSort.c  冒泡排序
+        ├── InsertSort.c  插入排序
+        ├── QuickSort.c   快速排序
+        ├── SelectSort.c  选择排序
+        └── ShellSort.c   希尔排序
