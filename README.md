@@ -10,7 +10,10 @@ Folder 'Arithmetic' just for learning algorithm with c language.
 ## Directory Structure
 
     Arithmetic
-    └── Sort
+    ├── Search 查找
+    │   └── FindBySeq.c    顺序查找
+    │
+    └── Sort 排序
         ├── BubbleSort.c   冒泡排序
         ├── HeapSort.c     堆排序
         ├── InsertSort.c   插入排序
