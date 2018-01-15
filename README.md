@@ -12,7 +12,8 @@ Folder 'Arithmetic' just for learning algorithm with c language.
     Arithmetic
     ├── Search 查找
     │   ├── BinSearch.c    二分查找
-    │   └── FindBySeq.c    顺序查找
+    │   ├── FindBySeq.c    顺序查找
+    │   └── InsertSearch.c 插值查找（基于二分查找）
     │
     └── Sort 排序
         ├── BubbleSort.c   冒泡排序

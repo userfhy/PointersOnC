@@ -35,25 +35,25 @@ int binSearch(int *sortedSeq, int seqLength, int keyData)
     return -1;
 }
 
-int compare(const void *a , const void *b ){
+int compare(const void *a , const void *b ) {
 
-  return (*(int *)a - *(int *)b);  //升序排序
+    return (*(int *)a - *(int *)b);  //升序排序
 
-//return *(int *)b - *(int *)a; //降序排序
+    //return *(int *)b - *(int *)a; //降序排序
 
-/*可见：参数列表是两个空指针，现在他要去指向你的数组元素。所以转型为你当前的类型，然后取值。
+/**
+ * 参数列表是两个空指针，现在他要去指向你的数组元素。所以转型为你当前的类型，然后取值。
+ * 升序排列时，若第一个参数指针指向的“值”大于第二个参数指针指向的“值”，则返回正；
+ * 若第一个参数指针指向的“值”等于第二个参数指针指向的“值”，则返回零；
+ * 若第一个参数指针指向的“值”小于第二个参数指针指向的“值”，则返回负。
+ * 降序排列时，则刚好相反。
+**/
 
-        升序排列时，若第一个参数指针指向的“值”大于第二个参数指针指向的“值”，则返回正；
-        若第一个参数指针指向的“值”等于第二个参数指针指向的“值”，则返回零；
-        若第一个参数指针指向的“值”小于第二个参数指针指向的“值”，则返回负。
-
-        降序排列时，则刚好相反。
-*/
 }
 
 void printArr(int *a, int length) {
     int i;
-    for(i = 0; i <= length; i++) {
+    for(i = 0; i < length; i++) {
         printf("%d ", a[i]);
     }
     printf("\n");
@@ -63,7 +63,7 @@ int main()
 {
     int TestData[] = { 34, 35, 26, 89, 56 };
     int intSize = sizeof(TestData[0]);
-    int N = sizeof(TestData)/sizeof(TestData[0]);
+    int N = sizeof(TestData) / intSize;
 
     printf("排序前:\n");
     printArr(TestData, N);
