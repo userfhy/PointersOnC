@@ -5,6 +5,7 @@
     │   ├── Calculator.c
     │   └── README.md
     │
+    ├── Palindromic.c  判断整数回文数
     ├── CharToAscii.c  字符转 ASCII 码
     ├── MaxNumInArr.c  数组中最多的元素
     ├── PrintCode.c    输出当前文件执行代码
