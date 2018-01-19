@@ -5,6 +5,8 @@
     │   ├── Calculator.c
     │   └── README.md
     │
+    ├── BinaryToDecimal.c  二进制转十进制
+    ├── DecimalToBinary.c  十进制转二进制
     ├── Palindromic.c  判断整数回文数
     ├── CharToAscii.c  字符转 ASCII 码
     ├── MaxNumInArr.c  数组中最多的元素
