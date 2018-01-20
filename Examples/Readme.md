@@ -6,9 +6,10 @@
     │   └── README.md
     │
     ├── BinaryToDecimal.c  二进制转十进制
+    ├── CountChars.c   统计字符串
+    ├── CharToAscii.c  字符转 ASCII 码
     ├── DecimalToBinary.c  十进制转二进制
     ├── Palindromic.c  判断整数回文数
-    ├── CharToAscii.c  字符转 ASCII 码
     ├── MaxNumInArr.c  数组中最多的元素
     ├── PrintCode.c    输出当前文件执行代码
     └── TimesTables.c  输出九九乘法口诀表
