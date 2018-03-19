@@ -10,6 +10,7 @@
     ├── CharToAscii.c  字符转 ASCII 码
     ├── DecimalToBinary.c  十进制转二进制
     ├── Factor.c       输出整数的因数
+    ├── JosephRing.c   约瑟夫环
     ├── Palindromic.c  判断整数回文数
     ├── MaxNumInArr.c  数组中最多的元素
     ├── MaximunValue.c 判断最大值
